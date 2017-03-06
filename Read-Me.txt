@@ -1,0 +1,24 @@
+The code has been developed in Java and tests could be run using JUnit 4
+
+The restaurants are ordered based on their ratings and if it's the same for two or more the one that could fulfill a larger order goes first
+With this ordering the code tries to order as many high quality food as possible first  
+
+Assumptions:
+There are five types of foods each restaurant might serve: normal, vegetarian, gluten-free, nut-free, fish-free
+These types are mutually exclusive 
+The input to run the program (Runner.java) starts with the number restaurants, then one restaurant info per line on the consequent lines
+The restaurant info looks like this: name,rating,total count,vegetarian count, gluten-free count, nut-free count, fish-free count
+The last line contains the lunch order details: total count,vegetarian count, gluten-free count, nut-free count, fish-free count
+If some of the special food types do not exist, 0 has to be entered
+
+The output will list restaurants (name and rating) and the details of order for them or show a message if it's not possible to fulfill the order
+
+A sample input/output:
+
+2
+A,5,40,4,0,0,0
+B,3,100,20,20,0,0
+50,5,7,0,0
+
+Restaurant [name=A, rating=5]: MealOrder [normal:36 vegetarian:4 ]
+Restaurant [name=B, rating=3]: MealOrder [normal:2 vegetarian:1 gluten_free:7 ]
